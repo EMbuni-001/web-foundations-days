@@ -7,76 +7,80 @@
   </head>
   <body>
     <header>
-      <h1>About QuickNotes</h1>
+      <h1>QuickNotes</h1>
+      <p>Capture ideas before they disappear.</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </nav>
     </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-    <main> 
+ 
+    <main>
+      <h2>About QuickNotes</h2>
+      <p>
+        QuickNotes is a simple web app for writing down ideas and reminders
+        in seconds. It was built step by step during the Web Foundations course.
+      </p>
+ 
       <section>
-        <h2>About QuickNotes</h2>
-        <p>QuickNotes is a simple web application that allows you to quickly capture and organize your ideas and notes.</p>
-      </section>
-
-      <section>
-        <h2>How to use QuickNotes</h2>
+        <h3>How to use QuickNotes</h3>
         <ol>
-          <li>Add new notes</li>
-          <li>View your notes</li>
-          <li>Edit and delete notes</li>
+          <li>Type your note in the "New note" box.</li>
+          <li>Press Enter or click "Add Note".</li>
+          <li>Click "Delete" on any note you no longer need.</li>
         </ol>
       </section>
-
+ 
       <section>
-        <h2>Features</h2>
-        <ul> 
-          <li>Add new notes</li>
-          <li>View your notes</li>
-          <li>Edit and delete notes</li>
+        <h3>Features</h3>
+        <ul>
+          <li>Add notes instantly</li>
+          <li>Works on phones and laptops</li>
+          <li>Notes are saved in your browser</li>
         </ul>
       </section>
-
-      <div>
+ 
+      <section>
+        <h3>Keyboard shortcuts</h3>
         <table>
-          <caption>Keyboard shortcuts</caption>
           <thead>
             <tr>
               <th>Shortcut</th>
               <th>Action</th>
-              <th>Comment</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Ctrl + S</td>
-              <td>Save the note.</td>
-              <td>Save the comment.</td>  
-            </tr> 
-            <tr>
-              <td>Ctrl + D</td>
-              <td>Delete the note.</td>
-              <td>Delete the comment.</td>  
+              <td>Enter</td>
+              <td>Add the note you typed</td>
             </tr>
-          </tbody>                     
+            <tr>
+              <td>Tab</td>
+              <td>Move to the next button or box</td>
+            </tr>
+          </tbody>
         </table>
-    </div>
-
-      <div>
-        <form id="note-form"> 
-          <label for="name">Name</label> 
-          <input type="text" id="name" name="name" required /> 
-          
-          <label for="email">Email</label> 
-          <input type="email" id="email" name="email" required /> 
-          
-          <label for="message">Message</label> 
+      </section>
+ 
+      <section>
+        <h3>Send feedback</h3>
+        <form id="feedback-form">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required />
+ 
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+ 
+          <label for="message">Message</label>
           <textarea id="message" name="message" rows="4" required></textarea>
-          
-          <button type="submit">Add Note</button>
+ 
+          <button type="submit">Send feedback</button>
         </form>
-      </div>
+      </section>
     </main>
-  </body>   
+ 
+    <footer>
+      <p>&copy; 2026 QuickNotes. Built during Web Foundations.</p>
+    </footer>
+  </body>
 </html>
