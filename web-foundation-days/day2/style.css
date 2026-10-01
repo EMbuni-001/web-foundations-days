@@ -1,0 +1,113 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #0ba184;
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+nav {
+  background-color: #0ba184;
+  padding: 16px;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.25;
+}
+
+main {
+  max-width: 640px;
+  margin: 24px auto;   
+  padding: 0 16px;
+  align-items: center;  
+}
+
+h1 {
+  color: Blue;
+} 
+
+h2 {
+  color: green;
+}
+
+section h3 {
+  color: whitecard;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  }
+
+section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+#note-form {
+  color: green;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;
+}
+
+#feedback-form {
+  color: green;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;
+}
+
+ button {
+  background-color: #0ba184;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+ }
+
+button:hover {
+  background-color: rgb(35, 77, 68);
+  transform: translateY(-4px); 
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 16px;
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: auto;
+        padding: auto;
+    }
+    #note-form {
+    flex-direction: column;
+  }
+}
+
+
+
+
