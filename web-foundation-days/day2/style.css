@@ -5,91 +5,157 @@
   box-sizing: border-box;
 }
 
-header {
-  background-color: #0ba184;
-  color: white;
-  padding: 16px;
-  text-align: center;
-}
-
-nav {
-  background-color: #0ba184;
-  padding: 16px;
-  text-align: center;
-}
-
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f4f6f8;
+  background-color: lightgoldenrodyellow;
   color: #222;
-  line-height: 1.25;
+  line-height: 1.5;
+}
+
+header {
+  background-color: maroon;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: white;
+  text-decoration: underline;
+  transform: translateY(-2px);
 }
 
 main {
   max-width: 640px;
-  margin: 24px auto;   
+  margin: 24px auto;
   padding: 0 16px;
-  align-items: center;  
 }
 
-h1 {
-  color: Blue;
-} 
-
-h2 {
-  color: green;
-}
-
-section h3 {
-  color: whitecard;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
-  }
-
-section table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 16px;
-  padding: 8px;
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 #note-form {
-  color: green;
-  margin-bottom: 24px;
-  margin-top: 24px;
   display: flex;
-  flex-direction: column; 
   gap: 8px;
+  flex-wrap: wrap;
+}
+
+#note-form label {
+  width: 100%;
+  font-weight: bold;
+}
+
+#note-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 #feedback-form {
-  color: green;
-  margin-bottom: 24px;
-  margin-top: 24px;
   display: flex;
-  flex-direction: column; 
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
 }
 
- button {
-  background-color: #0ba184;
+#feedback-form label {
+  font-weight: bold;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: teal;
   color: white;
   border: none;
   padding: 10px 18px;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
- }
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
 
 button:hover {
-  background-color: rgb(35, 77, 68);
-  transform: translateY(-4px); 
-  cursor: pointer;
+  background-color: darkgreen;
+  transform: translateY(-2px);
+}
+
+#notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note {
+  background-color: #fffbe6;
+  border-left: 4px solid #0ba184;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  background-color: #fffbe6;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f6f8;
 }
 
 footer {
@@ -99,15 +165,15 @@ footer {
 }
 
 @media (max-width: 600px) {
-    header {
-        font-size: auto;
-        padding: auto;
-    }
-    #note-form {
+  header {
+    padding: 16px 10px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  #note-form {
     flex-direction: column;
   }
 }
-
-
-
-
