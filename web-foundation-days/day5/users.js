@@ -1,4 +1,3 @@
-
 const API_URL = "https://jsonplaceholder.typicode.com/users";
 
 const loadBtn = document.querySelector("#load-users");
@@ -7,16 +6,15 @@ const statusText = document.querySelector("#status");
 const usersList = document.querySelector("#users-list");
 
 let allUsers = [];
-
-function renderUsers(usersToDisplay) {
-    usersList.innerHTML = ""; 
+function renderUsers(list) {
+  usersList.innerHTML = ""; 
   
-  if (usersToDisplay.length === 0 && allUsers.length > 0) {
+  if (list.length === 0 && allUsers.length > 0) {
     statusText.textContent = "No users match your filter.";
     return;
   }
-
-    usersToDisplay.forEach(user => {
+  
+  list.forEach(user => {
     const li = document.createElement("li");
     li.textContent = `${user.name} | ${user.email} | ${user.address.city} | ${user.company.name}`;
     usersList.appendChild(li);
@@ -32,7 +30,7 @@ async function loadUsers() {
   try {
     const response = await fetch(API_URL);
     
-    if (!response.ok) {
+        if (!response.ok) {
       throw new Error(`Server responded with status ${response.status}`);
     }
     
@@ -41,8 +39,6 @@ async function loadUsers() {
     renderUsers(allUsers);
     
     statusText.textContent = `Loaded ${allUsers.length} users successfully.`;
-    
-    filterInput.focus(); 
     
   } catch (error) {
     statusText.textContent = "Could not load users. Please try again.";
@@ -53,28 +49,13 @@ async function loadUsers() {
 }
 
 filterInput.addEventListener("input", () => {
-  const filterText = filterInput.value.trim().toLowerCase();
-
+  const filterText = filterInput.value.toLowerCase();
+  
   const filteredUsers = allUsers.filter(user => 
     user.name.toLowerCase().includes(filterText)
   );
   
   renderUsers(filteredUsers);
-
-  if (filterText === "" && allUsers.length > 0) {
-    statusText.textContent = `Loaded ${allUsers.length} users successfully.`;
-  }
-});
-
-filterInput.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    filterInput.value = "";    
-
-    renderUsers(allUsers);
-    if (allUsers.length > 0) {
-      statusText.textContent = `Loaded ${allUsers.length} users successfully.`;
-    }
-  }
 });
 
 loadBtn.addEventListener("click", loadUsers);
