@@ -1,0 +1,8 @@
+
+# Capstone Reflection
+
+The most difficult concepts in this course were JavaScript DOM manipulation, asynchronous programming (using `fetch` and `async/await`), and understanding system design trade-offs. Initially, dynamically creating HTML elements and managing state in Project 1 felt overwhelming. I overcame this by breaking the logic into small functions and using the browser console to debug. Async programming was harder because handling loading, success, and error states required a shift in thinking; I mastered it by carefully following the Day 5 API notes and practicing `try/catch` blocks in Project 2. Finally, the CAP theorem and system trade-offs were abstract, but working through the Day 7 and 8 scaling assignments made them concrete.
+
+If I could improve my QuickNotes capstone based on feedback, I would first enhance the frontend error handling by adding skeleton loaders and more descriptive error messages instead of generic text. Second, I would refactor `api.js` to separate the API logic from the UI rendering logic, making the code more modular and easier to test. Third, I plan to focus on continuous practice in these difficult areas, specifically by building more small projects that require asynchronous data fetching to solidify my understanding of `async/await` and error handling. Lastly, I want to use notes more within my code for better understanding during revision.
+
+Moving forward, the next thing I want to learn is Node.js and Express to build the actual backend for my API designs and PostgreSQL to practice the SQL transactions I designed on paper.
